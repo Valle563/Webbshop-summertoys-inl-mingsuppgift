@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 
 function Footer() {
   return (
-    <Footer>
+    <footer>
       <div>
         <p> Redegatan 1H </p>
         <p> 426 77 </p>
@@ -16,6 +16,6 @@ function Footer() {
         <p>Öppet: 9-16</p>
         <Link to="/login">Admin</Link>
       </div>
-    </Footer>
+    </footer>
   )
 }
