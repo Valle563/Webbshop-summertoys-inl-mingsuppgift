@@ -30,3 +30,5 @@ function App() {
 }
 
 export default App;
+
+// vad är skilladen mellan david rad 10&22 och min kod
