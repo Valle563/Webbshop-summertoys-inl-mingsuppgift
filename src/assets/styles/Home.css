@@ -1,0 +1,56 @@
+.hero {
+  height: 520px;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.2) 60%,
+    transparent 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 4rem;
+
+  gap: 24px;
+}
+
+.hero-overlay h1 {
+  color: white;
+
+  font-size: 54px;
+  font-weight: 900;
+
+  max-width: 540px;
+
+  text-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 360px;
+  }
+
+  .hero-overlay {
+    padding: 0 1.5rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 32px;
+  }
+}

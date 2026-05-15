@@ -1,10 +1,16 @@
-import { createHashRouter } from 'react-router'
+import { createHashRouter, Navigate } from 'react-router'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import Admin from './pages/Admin'
+
+function ProtectedRoute({ children }) {
+  const isAdmin = localStorage.getItem('isAdmin')
+  if (!isAdmin) return <Navigate to="/login" />
+  return children
+}
 
 const router = createHashRouter([
   {
@@ -16,7 +22,14 @@ const router = createHashRouter([
     ]
   },
   { path: '/login', element: <Login /> },
-  { path: '/admin', element: <Admin /> },
+  {
+    path: '/admin',
+    element: (
+      <ProtectedRoute>
+        <Admin />
+      </ProtectedRoute>
+    )
+  },
 ])
 
 export default router

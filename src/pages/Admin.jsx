@@ -5,6 +5,7 @@ import { collection, addDoc, deleteDoc, doc, updateDoc } from 'firebase/firestor
 import { db } from '../firebase'
 import useProducts from '../hooks/useProducts'
 import productSchema from '../validation/ProductSchema'
+import '../assets/styles/admin.css'
 
 function Admin() {
   const { products, loading } = useProducts()

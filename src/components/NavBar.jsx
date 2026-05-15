@@ -1,14 +1,28 @@
-import { Link } from 'react-router'
-// import "../"
+import { Link } from 'react-router-dom'
 
-function Navbar() {
+function NavBar() {
   return (
-    <nav>
-      <Link to="/"> SummerToys </Link>  
-      <Link to="/products"> Produkter </Link>  
-      <Link to="/cart"> Kundvagn </Link>  
+    <nav className="navbar">
+
+      <Link to="/" className="navbar-logo">
+        Sommarlek
+      </Link>
+
+      <div className="navbar-links">
+
+        <Link to="/">Hem</Link>
+
+        <Link to="/products">Produkter</Link>
+
+        <Link to="/login">Admin</Link>
+
+        <Link to="/cart" className="navbar-cart">
+          Kundvagn
+        </Link>
+
+      </div>
     </nav>
   )
 }
 
-export default Navbar
+export default NavBar

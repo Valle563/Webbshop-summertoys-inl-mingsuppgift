@@ -1,0 +1,45 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.btn-green {
+  background: var(--accent-green);
+  color: white;
+}
+
+.btn-red {
+  background: var(--accent-red);
+  color: white;
+}
+
+.btn-checkout {
+  background: var(--checkout-red);
+  color: white;
+}
+
+.btn-pill {
+  border-radius: 999px;
+}
+
+.btn-md {
+  padding: 12px 22px;
+  font-size: 14px;
+}
+
+.btn-lg {
+  padding: 15px 32px;
+  font-size: 16px;
+}

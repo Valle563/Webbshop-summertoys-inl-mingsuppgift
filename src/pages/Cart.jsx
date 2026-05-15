@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import useCartStore from '../store/cartStore'
+import '../assets/styles/cart.css'
 
 function Cart() {
   const { items, removeItem, updateQuantity, getTotal } = useCartStore()

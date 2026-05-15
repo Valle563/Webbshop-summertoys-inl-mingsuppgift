@@ -1,6 +1,6 @@
-
 import { useState } from 'react'
 import { useNavigate } from 'react-router'
+import '../assets/styles/login.css'
 
 function Login() {
   const [username, setUsername] = useState('')
