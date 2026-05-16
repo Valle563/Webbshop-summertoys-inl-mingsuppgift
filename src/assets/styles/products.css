@@ -1,0 +1,68 @@
+.products {
+  max-width: 1200px;
+
+  margin: 2rem auto;
+
+  padding: 0 1rem;
+}
+
+.products-controls {
+  display: flex;
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  flex-wrap: wrap;
+}
+
+.products-controls input,
+.products-controls select {
+  background: white;
+
+  border: 1.5px solid var(--border);
+
+  border-radius: var(--radius-sm);
+
+  padding: 12px 14px;
+
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.products-controls input::placeholder {
+  color: var(--text-light);
+}
+
+.products-controls input {
+  flex: 1;
+  min-width: 240px;
+}
+
+.products-controls input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(8,126,192,0.08);
+  border-color: rgba(8,126,192,0.6);
+}
+
+.products-controls select {
+  min-width: 180px;
+  color: var(--text-dark);
+}
+
+.products-controls select option {
+  color: var(--text-dark);
+}
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+@media (max-width: 760px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

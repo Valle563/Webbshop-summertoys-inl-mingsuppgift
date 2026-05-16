@@ -1,5 +1,6 @@
 {
   "name": "webbshop-summertoys",
+  "homepage": "https://Valle563.github.io/webbshop-summertoys",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,11 +8,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/"
   },
   "dependencies": {
+    "firebase": "^12.12.1",
+    "fuse.js": "^7.3.0",
+    "immer": "^11.1.6",
+    "joi": "^18.2.1",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "react-router": "^7.15.0",
+    "react-router-dom": "^7.15.1",
+    "zustand": "^5.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
@@ -24,6 +34,7 @@
     "eslint": "^10.2.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "vite": "^8.0.10"
   }
