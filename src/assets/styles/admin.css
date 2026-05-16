@@ -1,0 +1,162 @@
+.admin {
+  max-width: 1000px;
+
+  margin: 2rem auto;
+
+  padding: 0 1rem;
+}
+
+.admin h2 {
+  font-size: 32px;
+
+  font-weight: 900;
+
+  margin-bottom: 0;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin form {
+  background: white;
+
+  border-radius: var(--radius-lg);
+
+  padding: 28px;
+
+  margin-bottom: 32px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.admin form h3 {
+  margin-bottom: 20px;
+}
+
+.admin form > div {
+  margin-bottom: 18px;
+}
+
+.admin label {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  margin-bottom: 6px;
+}
+
+.admin input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  border: 1.5px solid var(--border);
+
+  margin-bottom: 16px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-row {
+  background: white;
+
+  border-radius: var(--radius-md);
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.product-row span {
+  flex: 1;
+
+  font-weight: 700;
+}
+
+.product-row button {
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.product-row button:first-of-type {
+  margin-left: 0;
+}
+
+.admin-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .admin-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+
+  .admin h2 {
+    font-size: 26px;
+  }
+
+  .admin form {
+    padding: 20px;
+  }
+
+  .admin form > div {
+    margin-bottom: 14px;
+  }
+
+  .admin input {
+    padding: 10px 12px;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .product-row span {
+    width: 100%;
+  }
+
+  .product-row button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-row button:first-of-type {
+    margin-left: 0;
+  }
+}

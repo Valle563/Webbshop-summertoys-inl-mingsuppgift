@@ -1,5 +1,6 @@
 {
   "name": "webbshop-summertoys",
+  "homepage": "https://Valle563.github.io/webbshop-summertoys",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +20,7 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router": "^7.15.0",
+    "react-router-dom": "^7.15.1",
     "zustand": "^5.0.13"
   },
   "devDependencies": {

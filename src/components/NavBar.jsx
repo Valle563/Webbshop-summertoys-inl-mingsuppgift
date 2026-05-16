@@ -1,13 +1,30 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
+import logoIcon from '../assets/images/Logo-icon.png'
 
-function Navbar() {
+function NavBar() {
   return (
-    <nav>
-      <link to="/"> SummerToys </link>  
-      <link to="/products"> Produkter </link>  
-      <link to="/cart"> Kundvagn </link>  
+    <nav className="navbar">
+
+      <Link to="/" className="navbar-logo">
+        <img src={logoIcon} alt="Sommarlek" className="navbar-logo-img" />
+        Sommarlek
+      </Link>
+
+      <div className="navbar-links">
+
+        <Link to="/">Hem</Link>
+
+        <Link to="/products">Produkter</Link>
+
+        <Link to="/login">Admin</Link>
+
+        <Link to="/cart" className="navbar-cart">
+          Kundvagn
+        </Link>
+
+      </div>
     </nav>
   )
 }
 
-export default Navbar
+export default NavBar

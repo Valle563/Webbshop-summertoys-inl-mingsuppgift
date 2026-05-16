@@ -1,0 +1,156 @@
+.cart {
+  max-width: 900px;
+  width: min(100%, 900px);
+
+  margin: 2rem auto;
+
+  padding: 0 1rem;
+}
+
+.cart h2 {
+  font-size: 30px;
+  font-weight: 900;
+
+  margin-bottom: 24px;
+}
+
+.empty-cart {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cart-item {
+  background: white;
+
+  border-radius: var(--radius-md);
+
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 14px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-item p {
+  flex: 1;
+  min-width: 0;
+
+  font-weight: 700;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-control button {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  background: var(--primary-blue);
+
+  color: white;
+
+  font-weight: 900;
+}
+
+/* Ensure +/- buttons are centered and square when using .btn classes */
+.qty-control button.btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+.cart-item-price {
+  min-width: 80px;
+
+  text-align: right;
+
+  font-weight: 900;
+
+  color: var(--primary-blue);
+}
+
+.cart-item-remove {
+  background: #fff0f0;
+
+  color: var(--accent-red);
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+}
+
+.cart-total {
+  background: white;
+
+  border-radius: var(--radius-md);
+
+  padding: 24px;
+
+  margin-top: 20px;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-total button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cart-checkout-btn {
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .cart {
+    margin: 1rem auto;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .cart-item p {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .qty-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cart-item-price,
+  .cart-item-remove {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cart-item-remove {
+    margin-top: 0;
+  }
+
+  .cart-total {
+    padding: 18px;
+  }
+}

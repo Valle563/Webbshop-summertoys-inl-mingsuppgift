@@ -1,23 +1,33 @@
-import { HashRouter, Routes, Route } from 'react-router'
-import Navbar from './components/NavBar.jsx'
-import Home from './pages/Home.jsx'
-import Products from './pages/Products.jsx'
-import Cart from './pages/Cart.jsx'
-import Login from './pages/Login.jsx'
-import Admin from './pages/Admin.jsx'
+// import { HashRouter, Routes, Route } from "react-router";
 
-function App() {
-  return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </HashRouter>
-  )
-}
+// import MainLayout from "./layout/MainLayout";
 
-export default App
+// import Home from "./pages/Home";
+// import Products from "./pages/Products";
+// import Cart from "./pages/Cart";
+// import Login from "./pages/Login";
+// import Admin from "./pages/Admin";
+
+// function App() {
+//   return (
+//     <HashRouter>
+//       <Routes>
+
+//         <Route element={<MainLayout />}>
+
+//           <Route path="/" element={<Home />} />
+//           <Route path="/products" element={<Products />} />
+//           <Route path="/cart" element={<Cart />} />
+
+//         </Route>
+
+//         <Route path="/login" element={<Login />} />
+//         <Route path="/admin" element={<Admin />} />
+
+//       </Routes>
+//     </HashRouter>
+//   );
+// }
+
+// export default App;
+
