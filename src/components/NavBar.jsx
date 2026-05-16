@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import logoIcon from '../assets/images/Logo-icon.png'
 
 function NavBar() {
   return (
     <nav className="navbar">
 
       <Link to="/" className="navbar-logo">
+        <img src={logoIcon} alt="Sommarlek" className="navbar-logo-img" />
         Sommarlek
       </Link>
 

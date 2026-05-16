@@ -4,10 +4,13 @@
   font-family: inherit;
   font-weight: 800;
   transition: 0.2s ease;
+  border-radius: 14px;
+  padding: 12px 22px;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+  filter: brightness(1.05);
 }
 
 .btn-primary {
@@ -32,6 +35,11 @@
 
 .btn-pill {
   border-radius: 999px;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 13px;
 }
 
 .btn-md {

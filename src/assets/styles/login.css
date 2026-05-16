@@ -11,7 +11,7 @@
 .login-box {
   background: white;
 
-  width: 100%;
+  width: min(100%, 420px);
   max-width: 420px;
 
   border-radius: var(--radius-lg);
@@ -57,10 +57,49 @@
   margin-bottom: 18px;
 }
 
-.error {
-  color: var(--accent-red);
+.btn-secondary {
+  background: #e2e8f0;
+  color: var(--text-dark);
+}
 
-  font-size: 13px;
+.btn-secondary:hover {
+  filter: brightness(0.95);
+}
 
-  margin-bottom: 12px;
+.login-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-action-link {
+  display: block;
+  width: 100%;
+}
+
+.login-actions .btn {
+  flex: 1 1 180px;
+}
+
+@media (max-width: 520px) {
+  .login-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .login-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .login {
+    padding: 1rem;
+  }
+
+  .login-box {
+    padding: 24px;
+  }
 }

@@ -5,6 +5,8 @@ import Products from './pages/Products'
 import Cart from './pages/Cart'
 import Login from './pages/Login'
 import Admin from './pages/Admin'
+import AddProduct from './pages/AddProduct'
+import EditProduct from './pages/EditProduct'
 
 function ProtectedRoute({ children }) {
   const isAdmin = localStorage.getItem('isAdmin')
@@ -19,17 +21,33 @@ const router = createHashRouter([
       { path: '/', element: <Home /> },
       { path: '/products', element: <Products /> },
       { path: '/cart', element: <Cart /> },
+      {
+        path: '/admin',
+        element: (
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
+        )
+      },
+      {
+        path: '/admin/add',
+        element: (
+          <ProtectedRoute>
+            <AddProduct />
+          </ProtectedRoute>
+        )
+      },
+      {
+        path: '/admin/edit/:id',
+        element: (
+          <ProtectedRoute>
+            <EditProduct />
+          </ProtectedRoute>
+        )
+      },
     ]
   },
   { path: '/login', element: <Login /> },
-  {
-    path: '/admin',
-    element: (
-      <ProtectedRoute>
-        <Admin />
-      </ProtectedRoute>
-    )
-  },
 ])
 
 export default router

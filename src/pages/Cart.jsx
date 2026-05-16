@@ -11,7 +11,7 @@ function Cart() {
         <h2>Kundvagnen är tom!</h2>
         <p>Hitta något kul i shoppen! 🏄</p>
         <Link to="/products">
-          <button>Gå till shoppen</button>
+          <button className="btn btn-green btn-md btn-pill">Gå till shoppen</button>
         </Link>
       </div>
     )
@@ -24,17 +24,18 @@ function Cart() {
         <div key={item.id} className="cart-item">
           <p>{item.name}</p>
           <div className="qty-control">
-            <button onClick={() => updateQuantity(item.id, item.quantity - 1)}
+            <button className="btn btn-primary btn-sm btn-pill" onClick={() => updateQuantity(item.id, item.quantity - 1)}
               disabled={item.quantity <= 1}>−</button>
             <span>{item.quantity}</span>
-            <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+            <button className="btn btn-primary btn-sm btn-pill" onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
           </div>
           <p>{item.price * item.quantity} kr</p>
-          <button onClick={() => removeItem(item.id)}>Ta bort</button>
+          <button className="btn btn-red btn-sm btn-pill" onClick={() => removeItem(item.id)}>Ta bort</button>
         </div>
       ))}
       <div className="cart-total">
         <h3>Totalt: {getTotal()} kr</h3>
+        <button className="btn btn-checkout btn-lg btn-pill">Beställ</button>
       </div>
     </div>
   )

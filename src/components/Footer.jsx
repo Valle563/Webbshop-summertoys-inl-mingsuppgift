@@ -1,15 +1,16 @@
 import { Link } from 'react-router'
+import logoIcon from '../assets/images/Logo-icon.png'
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <div>
-        <p> Redegatan 1H </p>
-        <p> 426 77 </p>
-        <p> Västra Frölunda </p>
+        <p>Redegatan 1H</p>
+        <p>426 77</p>
+        <p>Västra Frölunda</p>
       </div>
       <div>
-        <img src="/Logo-icon.png" alt="Logga" />
+        <img src={logoIcon} alt="Logga" />
       </div>
       <div>
         <p>031-704 67 00</p>

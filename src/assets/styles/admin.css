@@ -11,6 +11,14 @@
 
   font-weight: 900;
 
+  margin-bottom: 0;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
@@ -28,6 +36,10 @@
 
 .admin form h3 {
   margin-bottom: 20px;
+}
+
+.admin form > div {
+  margin-bottom: 18px;
 }
 
 .admin label {
@@ -84,4 +96,67 @@
   border-radius: 10px;
 
   font-weight: 700;
+  margin-left: 10px;
+}
+
+.product-row button:first-of-type {
+  margin-left: 0;
+}
+
+.admin-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .admin-header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+
+  .admin h2 {
+    font-size: 26px;
+  }
+
+  .admin form {
+    padding: 20px;
+  }
+
+  .admin form > div {
+    margin-bottom: 14px;
+  }
+
+  .admin input {
+    padding: 10px 12px;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .product-row span {
+    width: 100%;
+  }
+
+  .product-row button {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .product-row button:first-of-type {
+    margin-left: 0;
+  }
 }

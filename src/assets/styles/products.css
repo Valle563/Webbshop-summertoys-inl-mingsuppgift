@@ -26,6 +26,11 @@
   padding: 12px 14px;
 
   font-size: 14px;
+  color: var(--text-dark);
+}
+
+.products-controls input::placeholder {
+  color: var(--text-light);
 }
 
 .products-controls input {
@@ -33,10 +38,31 @@
   min-width: 240px;
 }
 
+.products-controls input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(8,126,192,0.08);
+  border-color: rgba(8,126,192,0.6);
+}
+
+.products-controls select {
+  min-width: 180px;
+  color: var(--text-dark);
+}
+
+.products-controls select option {
+  color: var(--text-dark);
+}
+
 .product-grid {
   display: grid;
 
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 
-  gap: 20px;
+  gap: 24px;
+}
+
+@media (max-width: 760px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }

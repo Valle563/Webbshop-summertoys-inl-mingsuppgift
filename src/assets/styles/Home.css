@@ -1,13 +1,13 @@
 .hero {
-  height: 520px;
-
-  background-size: cover;
-  background-position: center;
+  /* Fill space between header and footer */
+  min-height: calc(100vh - 140px);
+  max-height: 900px;
 
   position: relative;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-overlay {
@@ -16,29 +16,58 @@
 
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.6) 0%,
-    rgba(0,0,0,0.2) 60%,
+    rgba(0,0,0,0.5) 0%,
+    rgba(0,0,0,0.15) 60%,
     transparent 100%
   );
 
   display: flex;
-  flex-direction: column;
+  /* overlay covers whole hero */
+  align-items: center;
   justify-content: center;
+  text-align: center;
 
-  padding: 0 4rem;
+  padding: 0;
+  gap: 36px;
+}
 
-  gap: 24px;
+/* centered content container inside overlay */
+.hero-content {
+  width: min(78%, 760px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  z-index: 2;
 }
 
 .hero-overlay h1 {
   color: white;
 
-  font-size: 54px;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
   font-weight: 900;
+  line-height: 1.25;
 
-  max-width: 540px;
+  max-width: 680px;
+  margin: 0 auto;
 
-  text-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  text-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+/* image inside hero for consistent cropping */
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.hero-overlay {
+  z-index: 2;
 }
 
 @media (max-width: 768px) {

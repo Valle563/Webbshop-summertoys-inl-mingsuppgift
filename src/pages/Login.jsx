@@ -3,44 +3,59 @@ import { useNavigate } from 'react-router'
 import '../assets/styles/login.css'
 
 function Login() {
-  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
+  const ADMIN_EMAIL = 'admin@admin.com'
+
   function handleLogin(e) {
     e.preventDefault()
-    if (username === 'admin' && password === 'password') {
-      localStorage.setItem('isAdmin', 'true')
-      navigate('/admin')
-    } else {
-      setError('Fel användarnamn eller lösenord')
+
+    if (email !== ADMIN_EMAIL) {
+      setError('Endast admin@admin.com får logga in här')
+      return
     }
+
+    if (password !== 'password') {
+      setError('Fel e-post eller lösenord')
+      return
+    }
+
+    localStorage.setItem('isAdmin', 'true')
+    navigate('/admin')
   }
 
   return (
     <div className="login">
-      <h2>Admin-inloggning</h2>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Användarnamn</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Lösenord</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        {error && <p className="error">{error}</p>}
-        <button type="submit">Logga in</button>
-      </form>
+      <div className="login-box">
+        <h2>Admin-inloggning</h2>
+        <form onSubmit={handleLogin}>
+          <div>
+            <label>E-post</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="admin@admin.com"
+            />
+          </div>
+          <div>
+            <label>Lösenord</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          {error && <p className="error">{error}</p>}
+          <div className="login-actions">
+            <button type="submit" className="btn btn-primary btn-lg btn-pill">Logga in</button>
+            <button type="button" className="btn btn-secondary btn-lg btn-pill" onClick={() => navigate('/products')}>Till shopen</button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
