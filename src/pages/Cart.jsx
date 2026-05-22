@@ -1,9 +1,13 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import useCartStore from '../store/cartStore'
 import '../assets/styles/cart.css'
 
 function Cart() {
-  const { items, removeItem, updateQuantity, getTotal } = useCartStore()
+  const items = useCartStore((state) => state.items)
+  const removeItem = useCartStore((state) => state.removeItem)
+  const updateQuantity = useCartStore((state) => state.updateQuantity)
+
+  const total = items.reduce((sum, i) => sum + Number(i.price) * Number(i.quantity), 0)
 
   if (items.length === 0) {
     return (
@@ -34,7 +38,7 @@ function Cart() {
         </div>
       ))}
       <div className="cart-total">
-        <h3>Totalt: {getTotal()} kr</h3>
+        <h3>Totalt: {total} kr</h3>
         <button className="btn btn-checkout btn-lg btn-pill">Beställ</button>
       </div>
     </div>

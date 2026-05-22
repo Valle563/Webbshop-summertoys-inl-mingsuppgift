@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import heroImage from '../assets/images/HomePageIcon.png'
 import '../assets/styles/home.css'
 

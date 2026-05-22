@@ -1,6 +1,6 @@
 
 
-import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router-dom'
 import { collection, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 import useProducts from '../hooks/useProducts'
