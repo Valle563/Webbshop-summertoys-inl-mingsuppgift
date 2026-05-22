@@ -1,4 +1,4 @@
-import { createHashRouter, Navigate } from 'react-router'
+import { createHashRouter, Navigate } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
 import Home from './pages/Home'
 import Products from './pages/Products'

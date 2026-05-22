@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import logoIcon from '../assets/images/Logo-icon.png'
 
 function Footer() {
